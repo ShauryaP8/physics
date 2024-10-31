@@ -72,6 +72,7 @@ button:hover {
     align-items: center;
     padding: 20px;
     color: #ffffff;
+    z-index: 1; /* Ensure content appears above particles */
 }
 
 .container h1 {
