@@ -1,0 +1,118 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d2b, #09092f, #00001a);
+    color: #ffffff;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles for homepage */
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #66f3ff;
+}
+
+p {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #66f3ff;
+    color: #0d0d2b;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #66f3ff;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #66f3ff;
+}
+
+/* Particle Styling */
+#particle-container-back, #particle-container-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    transition: opacity 0.5s;
+}
+
+/* Shared container and header styles for overview */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #66f3ff;
+    margin-bottom: 20px;
+}
+
+/* Card grid layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Individual card styles */
+.card {
+    background: rgba(34, 34, 85, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #66f3ff;
+    box-shadow: 0 0 15px rgba(102, 243, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgba(102, 243, 255, 0.8);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Fade transition effect */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
