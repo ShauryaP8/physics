@@ -1,4 +1,4 @@
-// Particle animation for homepage
+// Particle animation for both homepage and overview page
 const particleContainerBack = document.getElementById("particle-container-back");
 const particleContainerFront = document.getElementById("particle-container-front");
 const particles = [];
@@ -67,7 +67,7 @@ document.addEventListener("mousemove", (event) => {
     });
 });
 
-// Navigate to the overview page with fade effect
+// Navigate to the specified URL with fade effect
 function navigateTo(url) {
     document.body.classList.add("fade-out");
     setTimeout(() => {
@@ -85,4 +85,5 @@ document.querySelector("button").addEventListener("click", function() {
     navigateTo("overview.html");
 });
 
+// Start the particle animation
 animateParticles();
